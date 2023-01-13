@@ -1,2 +1,4 @@
-<input type="text" (input)="term = $any($event.target).value">
-<p>{{term}}</p>
+<form (submit)="onFormSubmit($event)">
+  <input type="text" (input)="term = $any($event.target).value">
+  <p>{{term}}</p>
+</form>
