@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "httpRequest": {
+    "wsearch": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/http-request",
+            "outputPath": "dist/wsearch",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "httpRequest:build:production"
+              "browserTarget": "wsearch:build:production"
             },
             "development": {
-              "browserTarget": "httpRequest:build:development"
+              "browserTarget": "wsearch:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "httpRequest:build"
+            "browserTarget": "wsearch:build"
           }
         },
         "test": {
@@ -105,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "96db120d-3d57-4365-a609-9ce1851ceecf"
+    "analytics": "7862e8d4-bbf0-4c1f-b60e-e14e50240b8f"
   }
 }
