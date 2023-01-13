@@ -8,6 +8,6 @@ import {Component} from '@angular/core';
 export class AppComponent {
 
   onTerm(event: string) {
-    console.log('hello from parent and emitted propert is : ', event)
+    console.log('hello from parent and emitted property is : ', event)
   }
 }
