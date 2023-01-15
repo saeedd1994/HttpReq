@@ -12,6 +12,7 @@ export class AppComponent {
 
   onTerm(event: string) {
     console.log('hello from parent and emitted property is : ', event)
-    this.wiki.show(event);
+    let res= this.wiki.show(event);
+    console.log(res)
   }
 }
