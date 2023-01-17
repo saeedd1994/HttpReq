@@ -1,14 +1,12 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class WikipediaService {
 
-  constructor() {
-    console.log('hello from service constructor')
-  }
-  show(term: string){
-    return `hello from wikipedia : ${term}`
+  constructor(private http: HttpClient) {
+    return this.http.get()
   }
 }
