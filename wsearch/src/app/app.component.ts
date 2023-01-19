@@ -7,12 +7,14 @@ import {WikipediaService} from "./services/wikipedia.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private wiki: WikipediaService) {
+  constructor(private wikipediaService: WikipediaService) {
   }
 
   onTerm(event: string) {
-    console.log('hello from parent and emitted property is : ', event)
-    let res= this.wiki.show(event);
-    console.log(res)
+    console.log('hello from parent and emitted property is : ', event);
+    this.wikipediaService.getWikiApi(event).subscribe((response)=>{
+      console.log(response)
+    })
   }
 }
+
