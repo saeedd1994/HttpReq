@@ -5,8 +5,9 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class WikipediaService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) {
-    return this.http.get()
+  public getApi(term: string){
+    return this.http.get('http://en.wikipedia.org/w/api.php')
   }
 }
