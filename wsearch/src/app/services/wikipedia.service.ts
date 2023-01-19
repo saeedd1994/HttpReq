@@ -6,8 +6,16 @@ import {HttpClient} from "@angular/common/http";
 })
 export class WikipediaService {
   constructor(private http: HttpClient) {}
-
-  public getApi(term: string){
-    return this.http.get('http://en.wikipedia.org/w/api.php')
+  public getWikiApi(term: string) {
+    return this.http.get('https://en.wikipedia.org/w/api.php',
+      {
+        params: {
+          action: 'query',
+          list: 'search',
+          srsearch: term,
+          format: 'json',
+          origin: '*'
+        }
+      })
   }
 }
