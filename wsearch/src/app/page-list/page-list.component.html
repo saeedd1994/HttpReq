@@ -1,1 +1,20 @@
-<p>page-list works!</p>
+<table class="table is-bordered is-striped">
+  <thead>
+  <tr>
+    <th>index</th>
+    <th>title</th>
+    <th>word-count</th>
+    <th>snippet</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let page of pages;let i= index">
+    <td>{{i + 1}}</td>
+    <td>{{page.title}}</td>
+    <td>{{page.wordcount}}</td>
+    <td>{{page.snippet}}</td>
+  </tr>
+
+  </tbody>
+</table>

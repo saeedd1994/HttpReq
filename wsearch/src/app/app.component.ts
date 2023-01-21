@@ -7,13 +7,15 @@ import {WikipediaService} from "./services/wikipedia.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  pages:any[]=[];
   constructor(private wikipediaService: WikipediaService) {
   }
 
   onTerm(event: string) {
     console.log('hello from parent and emitted property is : ', event);
-    this.wikipediaService.getWikiApi(event).subscribe((response)=>{
-      console.log(response)
+    this.wikipediaService.getWikiApi(event).subscribe((response: any)=>{
+      console.log(response.query.search)
+      this.pages= response.query.search;
     })
   }
 }
