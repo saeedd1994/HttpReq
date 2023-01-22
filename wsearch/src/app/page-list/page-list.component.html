@@ -13,7 +13,7 @@
     <td>{{i + 1}}</td>
     <td>{{page.title}}</td>
     <td>{{page.wordcount}}</td>
-    <td>{{page.snippet}}</td>
+    <td [innerHTML]="page.snippet"></td>
   </tr>
 
   </tbody>
