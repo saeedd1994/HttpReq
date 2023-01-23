@@ -1,20 +1,14 @@
-<table class="table is-bordered is-striped">
-  <thead>
+<table class="table is-bordered is-striped is-hoverable">
   <tr>
     <th>index</th>
     <th>title</th>
     <th>word-count</th>
     <th>snippet</th>
   </tr>
-  </thead>
-
-  <tbody>
   <tr *ngFor="let page of pages;let i= index">
     <td>{{i + 1}}</td>
-    <a target="_blank" [href]="'https://en.wikipedia.org?curid=' + page.pageid"><td>{{page.title}}</td></a>
+      <td><a target="_blank" [href]="'https://en.wikipedia.org?curid=' + page.pageid">{{page.title}}</a></td>
     <td>{{page.wordcount}}</td>
     <td [innerHTML]="page.snippet"></td>
   </tr>
-
-  </tbody>
 </table>
