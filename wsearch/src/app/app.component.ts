@@ -12,9 +12,7 @@ export class AppComponent {
   }
 
   onTerm(event: string) {
-    console.log('hello from parent and emitted property is : ', event);
     this.wikipediaService.getWikiApi(event).subscribe((response: any)=>{
-      console.log(response.query.search)
       this.pages= response.query.search;
     })
   }
